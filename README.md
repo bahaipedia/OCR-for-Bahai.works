@@ -27,3 +27,5 @@ Instructions:
         In return '{{page|' + (i-18) + '|file=' + process.argv[3] + '.pdf|page=' + i + '}}' + text;
         
         The i-18 means the book numbering (Page 1) began on page 19 of the PDF. Page 19 of the pdf is Page 1 of the text. 19 minus 1 is 18. 
+
+        {{page|...}} refers to the Page template: https://bahai.works/Template:Page
