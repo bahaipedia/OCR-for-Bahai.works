@@ -29,3 +29,12 @@ Instructions:
         The i-18 means the book numbering (Page 1) began on page 19 of the PDF. Page 19 of the pdf is Page 1 of the text. 19 minus 1 is 18. 
 
         {{page|...}} refers to the Page template: https://bahai.works/Template:Page
+
+
+To run OCR in a language other than English you will need to have downloaded the language data (https://github.com/tesseract-ocr/tessdata). For me 
+these files are placed in C:\Program Files\Tesseract-OCR\tessdata. And then modify line 25 in this file
+https://github.com/bahaipedia/node-ocr/blob/main/node_modules/ocr-bulk/node_modules/node-tesseract/lib/tesseract.js
+
+If you downloaded German (deu.traineddata) then you can modify  'l': 'eng' to read  'l': 'deu'
+
+  
