@@ -21,6 +21,7 @@ Instructions:
         373 is the number of pages in the PDF. 
         
         ot.pad(i, 3) may need to be modified. The 3 incicates more than 100 page images. So page numbering is Somefile_Page_001.png
+        
         ot.pad(i, 2) would be used if you had Somefile_Page_01.png
         
         In return '{{page|' + (i-18) + '|file=' + process.argv[3] + '.pdf|page=' + i + '}}' + text;
