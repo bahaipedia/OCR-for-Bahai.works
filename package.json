@@ -11,6 +11,7 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
+    "lint" : "eslint ."
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,6 @@
     "ocr-bulk": "0.6.0"
   },
   "devDependencies": {
+    "eslint": "^8.13.0"
   }
 }
