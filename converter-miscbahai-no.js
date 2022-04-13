@@ -2,7 +2,7 @@
 //
 // node converter-miscbahai-no.js VahmanFereydun 175_Years_of_Persecution 349
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[4],

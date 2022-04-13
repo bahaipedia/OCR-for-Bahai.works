@@ -3,7 +3,7 @@
 // node converter-ab.js 22 3 24
 // node converter-ab.js volume, issue, number of pages
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[4],

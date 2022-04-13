@@ -2,7 +2,7 @@
 //
 // node converter-sdw.js Jg_19_Nr_06-08 36
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[3],

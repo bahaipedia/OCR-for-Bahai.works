@@ -2,7 +2,7 @@
 //
 // node converter-bahaicanada.js 15 1 40
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[4],

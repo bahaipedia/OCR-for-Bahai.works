@@ -3,7 +3,7 @@
 // node converter-abold.js 1985 April 32
 // node converter-abold.js year, month, number of pages
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[4],

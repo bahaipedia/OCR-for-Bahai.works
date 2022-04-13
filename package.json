@@ -9,6 +9,7 @@
   "description": "Code necessary to replicate current OCR practice on bahai.works",
   "license": "MIT",
   "keywords": [],
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "lint" : "eslint ."

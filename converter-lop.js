@@ -2,7 +2,7 @@
 //
 // node converter-lop.js 47 8
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[3],

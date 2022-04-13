@@ -2,7 +2,7 @@
 //
 // node converter-childway.js 46 6
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[3],

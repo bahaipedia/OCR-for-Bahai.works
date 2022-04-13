@@ -2,7 +2,7 @@
 //
 // node converter-bw.js BW_Volume5 23
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 22,
     end: process.argv[3],

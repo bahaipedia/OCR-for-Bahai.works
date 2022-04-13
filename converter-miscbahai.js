@@ -2,7 +2,7 @@
 //
 // node converter-miscbahai.js 1.incoming Revelation_of_Bahaullah_Vol_1 373
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 373,
     end: process.argv[4],

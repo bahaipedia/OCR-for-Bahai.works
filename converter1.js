@@ -2,7 +2,7 @@
 //
 // node converter1.js 11
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 401,
     end: process.argv[2],

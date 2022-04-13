@@ -3,7 +3,7 @@
 // node converter-wo.js 2 14 3_4 52
 // node converter-wo.js series, volume, issue, number of pages
 
-const ot = require('ocr-bulk');
+import ot from 'ocr-bulk';
 ot.writeFile({
     start: 1,
     end: process.argv[5],
