@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "bahaipedia-ocr",
+  "version": "0.1.0",
+  "author": "David Haslip",
+  "contributors": [
+    "Brett Zamir"
+  ],
+  "description": "Code necessary to replicate current OCR practice on bahai.works",
+  "license": "MIT",
+  "keywords": [],
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahaipedia/node-ocr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bahaipedia/node-ocr/issues"
+  },
+  "homepage": "https://github.com/bahaipedia/node-ocr",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "ocr-bulk": "0.6.0"
+  },
+  "devDependencies": {
+  }
+}
