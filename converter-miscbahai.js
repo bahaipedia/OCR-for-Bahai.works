@@ -4,7 +4,7 @@
 
 import ot from 'ocr-bulk';
 ot.writeFile({
-    start: 373,
+    start: 1,
     end: process.argv[4],
     outputPath: __dirname + '/../../Bahai.works/English/3.Miscbahai/' + process.argv[2] + '/' + process.argv[3] + '.txt',
     getImagePath (i) {
