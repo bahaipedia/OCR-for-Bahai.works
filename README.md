@@ -7,39 +7,47 @@ for Baha'i News or converter-cbn.js for Canadian Baha'i News.
 
 For books use converter-miscbahai.js
 
-## Installation
+## Prerequisite installation instructions
 
-After cloning, perform these steps:
+1. Download/clone this repository to a folder on your computer, eg: C:/node-ocr
+2. Download node.js (https://nodejs.org/en/). During installation (windows) you do not need to install Chocolatey.
+3. (Windows) Download and install git (https://git-scm.com/download/win). I checked only default options during installation. 
+4. In console (I use ConEmu https://conemu.github.io/)    
+    1. cd C:\node-ocr
+    2. npm i -g pnpm (assuming you didn't already have pnpm)
+    3. pnpm i
 
-1. `npm i -g pnpm` (if you don't already have `pnpm`)
-1. `pnpm i`
+C:/node-ocr should now have a new folder: node_modules.
 
-## Requirements
+5. Download and install Tesseract. (Windows https://github.com/UB-Mannheim/tesseract/wiki Windows). If you plan on ocr'ing other languages you can select those during installation. They can also be added later. You may also need to add a PATH variable, described below.
+You are now ready to use this package.
 
-1. Tesseract OCR (eg https://github.com/UB-Mannheim/tesseract/wiki for Windows)
-2. node.js (https://nodejs.org/en/)
-3. node-tesseract (this repository)
 
-## Instructions
 
-1. Create a directory on your computer called node-ocr, place this repository in that directory, so you have eg: `C:\node-ocr\converter-miscbahai.js`
-2. Open the PDF you want to OCR and save each page as a PNG image (requires Acrobat Pro or similar). In my version of Acrobat: `File > Save As Other > Image > PNG`
-3. Navigate to the node-ocr directory in console, eg using ConEmu (https://conemu.github.io/): `cd C:\node-ocr`
-4. Run the script from the console: `node converter-miscbahai.js 1.incoming Revelation_of_Bahaullah_Vol_1 373`
 
-    1.incoming is the name of a folder on my computer. You will need to modify outputPath and getImagePath in converter-miscbahai.js.
-    Revelation_of_Bahaullah_Vol_1 is the title of a PDF I want to run OCR on. 373 is the number of pages in the PDF.
+## OCR'ing instructions
 
-    ot.pad(i, 3) may need to be modified. The 3 indicates more than 100 page images. So page numbering is Somefile_Page_001.png
+1. Open the PDF you want to OCR and save each page as a PNG image (requires Acrobat Pro or similar). In my version of Acrobat: File > Save As Other > Image > PNG
 
-    ot.pad(i, 2) would be used if you had Somefile_Page_01.png
+2. Modify the script (eg. converter-miscbahai.js) paths outputPath: __dirname and getImagePath as necessary to match the location where you have saved the page images from step 1. (Note that where you see /../../Bahai.works/ that means going back two directory levels from where node-ocr is installed. If you put the images in a folder called "Images" on your desktop it would be: /../Users/dhaslip/Desktop/ and in the return section it would look something like return 'C:\\Users\\dhaslip\\Desktop\\...')
 
-    In return '{{page|' + (i-18) + '|file=' + process.argv[3] + '.pdf|page=' + i + '}}' + text;
+3. Navigate to the node-ocr directory in console, eg using ConEmu (https://conemu.github.io/): cd C:\node-ocr
 
-    The i-18 means the book numbering (Page 1) began on page 19 of the PDF. Page 19 of the pdf is Page 1 of the text. 19 minus 1 is 18.
+4. Run the script from the console: node converter-miscbahai.js Images Revelation_of_Bahaullah_Vol_1 373
 
-    {{page|...}} refers to the Page template: https://bahai.works/Template:Page
+If you get an error ReferenceError: __dirname is not defined in ES module scope then add this to the top of your converter-miscbahai.js script:
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+5. If you get an error tesseract is not recognized as an internal or external command you need to add a PATH variable (windows). Start menu, search "path" and find "Edit the system environment variables" then click "Environment Variables" which is at the bottom of the "Advanced" tab. In the top box find "Path" click "Edit". Click "New" and add (for example) C:\Program Files\Tesseract-OCR. 
+
+Close console and retry.
+
+
+## Tesseract in other languages
 
 To run OCR in a language other than English you will need to have downloaded the language data (https://github.com/tesseract-ocr/tessdata). For me
 these files are placed in C:\Program Files\Tesseract-OCR\tessdata. And then modify line 25 in this file
