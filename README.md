@@ -25,7 +25,7 @@ You are now ready to use this package.
 
 
 
-## OCR'ing instructions
+## OCR instructions
 
 1. Open the PDF you want to OCR and save each page as a PNG image (requires Acrobat Pro or similar). In my version of Acrobat: File > Save As Other > Image > PNG
 
