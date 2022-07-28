@@ -40,10 +40,12 @@ You are now ready to use this package.
 
 If you get an error ReferenceError: __dirname is not defined in ES module scope then add this to the top of your converter-miscbahai.js script:
 
+```
 import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+```
 
 5. If you get an error tesseract is not recognized as an internal or external command you need to add a PATH variable (windows). Start menu, search "path" and find "Edit the system environment variables" then click "Environment Variables" which is at the bottom of the "Advanced" tab. In the top box find "Path" click "Edit". Click "New" and add (for example) C:\Program Files\Tesseract-OCR. 
 
