@@ -27,9 +27,8 @@ After cloning, perform these steps:
 3. Navigate to the node-ocr directory in console, eg using ConEmu (https://conemu.github.io/): `cd C:\node-ocr`
 4. Run the script from the console: `node converter-miscbahai.js 1.incoming Revelation_of_Bahaullah_Vol_1 373`
 
-    1. incoming is the name of a folder on my computer. You will need to modify outputPath and getImagePath in converter-miscbahai.js
-    Revelation_of_Bahaullah_Vol_1 is the title of a PDF I want to run OCR on
-    373 is the number of pages in the PDF.
+    1.incoming is the name of a folder on my computer. You will need to modify outputPath and getImagePath in converter-miscbahai.js.
+    Revelation_of_Bahaullah_Vol_1 is the title of a PDF I want to run OCR on. 373 is the number of pages in the PDF.
 
     ot.pad(i, 3) may need to be modified. The 3 indicates more than 100 page images. So page numbering is Somefile_Page_001.png
 
