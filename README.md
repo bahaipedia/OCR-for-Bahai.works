@@ -31,7 +31,7 @@ You are now ready to use this package.
 
 2. Modify the script (eg. converter-miscbahai.js) paths outputPath: __dirname and getImagePath as necessary to match the location where you have saved the page images from step 1. (Note that where you see /../../Bahai.works/ that means going back two directory levels from where node-ocr is installed. If you put the images in a folder called "Images" on your desktop it would be: /../Users/dhaslip/Desktop/ and in the return section it would look something like return 'C:\\Users\\dhaslip\\Desktop\\...')
 
-3. Navigate to the node-ocr directory in console, eg using ConEmu (https://conemu.github.io/): cd C:\node-ocr
+3. Navigate to the node-ocr directory in console: cd C:\node-ocr
 
 4. Run the script from the console: node converter-miscbahai.js Images Revelation_of_Bahaullah_Vol_1 373
 
@@ -46,6 +46,9 @@ const __dirname = path.dirname(__filename);
 
 Close console and retry.
 
+6. If you get an error about the file not being found, double check the path, filename, and "Start:" variables in the .js script, (eg: start: 1, to start at Somefilename_Page_1.png) and ot.pad(...) variables (described next).
+
+7. The .js script variable ot.pad(i, 3) defines the number of zero's in the filename before the page number. Somefilename_Page_1.png would use ot.pad(i, 1), Somefilename_Page_01.png would use ot.pad(i, 2) and Somefilename_Page_001.png would use ot.pad(i, 3), etc.
 
 ## Tesseract in other languages
 
