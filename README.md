@@ -19,7 +19,7 @@ For books use converter-miscbahai.js
 
 C:/node-ocr should now have a new folder: node_modules.
 
-5. Download and install Tesseract. (Windows https://github.com/UB-Mannheim/tesseract/wiki Windows). If you plan on ocr'ing other languages you can select those during installation. They can also be added later. You may also need to add a PATH variable, described below.
+5. Download and install Tesseract. (Windows https://github.com/UB-Mannheim/tesseract/wiki). If you plan on ocr'ing other languages you can select those during installation. They can also be added later. You may also need to add a PATH variable, described below.
 You are now ready to use this package.
 
 
