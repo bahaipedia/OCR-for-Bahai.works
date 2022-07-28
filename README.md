@@ -34,6 +34,9 @@ You are now ready to use this package.
 3. Navigate to the node-ocr directory in console: cd C:\node-ocr
 
 4. Run the script from the console: node converter-miscbahai.js Images Revelation_of_Bahaullah_Vol_1 373
+    1. Images is the folder on your desktop
+    2. Revelation_of_Bahaullah_Vol_1 is the name of the PDF
+    3. 373 is the total number of pages in the PDF file (total number of images created in step 1). 
 
 If you get an error ReferenceError: __dirname is not defined in ES module scope then add this to the top of your converter-miscbahai.js script:
 
