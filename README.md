@@ -29,7 +29,7 @@ You are now ready to use this package.
 
 1. Open the PDF you want to OCR and save each page as a PNG image (requires Acrobat Pro or similar). In my version of Acrobat: File > Save As Other > Image > PNG
 
-2. Modify the script (eg. converter-miscbahai.js) paths outputPath: __dirname and getImagePath as necessary to match the location where you have saved the page images from step 1. (Note that where you see /../../Bahai.works/ that means going back two directory levels from where node-ocr is installed. If you put the images in a folder called "Images" on your desktop it would be: /../Users/dhaslip/Desktop/ and in the return section it would look something like return 'C:\\Users\\dhaslip\\Desktop\\...')
+2. Modify the script (eg. converter-miscbahai.js) paths outputPath: __dirname and getImagePath as necessary to match the location where you have saved the page images from step 1. (Note that where you see /../../Bahai.works/ that means going back two directory levels from where node-ocr is installed. If you put the images in a folder called "Images" on your desktop it would be: /../Users/[username]/Desktop/ and in the return section it would look something like return 'C:\\Users\\[username]\\Desktop\\...')
 
 3. Navigate to the node-ocr directory in console: cd C:\node-ocr
 
@@ -58,7 +58,6 @@ Close console and retry.
 ## Tesseract in other languages
 
 To run OCR in a language other than English you will need to have downloaded the language data (https://github.com/tesseract-ocr/tessdata). For me
-these files are placed in C:\Program Files\Tesseract-OCR\tessdata. And then modify line 25 in this file
-https://github.com/bahaipedia/node-ocr/blob/main/node_modules/ocr-bulk/node_modules/node-tesseract/lib/tesseract.js
+these files are placed in C:\Program Files\Tesseract-OCR\tessdata. And then modify line 25 in this file node_modules/node-tesseract/lib/tesseract.js
 
 If you downloaded German (deu.traineddata) then you can modify  'l': 'eng' to read  'l': 'deu'
