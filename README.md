@@ -12,7 +12,7 @@ For books use converter-miscbahai.js
 1. Download/clone this repository to a folder on your computer, eg: C:/node-ocr
 2. Download node.js (https://nodejs.org/en/). During installation (windows) you do not need to install Chocolatey.
 3. (Windows) Download and install git (https://git-scm.com/download/win). I checked only default options during installation. 
-4. In console (I use ConEmu https://conemu.github.io/)    
+4. In console (I use ConEmu https://conemu.github.io/ )    
     1. cd C:\node-ocr
     2. npm i -g pnpm (assuming you didn't already have pnpm)
     3. pnpm i
